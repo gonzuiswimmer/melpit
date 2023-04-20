@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Artisan;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->describe('Display an inspiring quote');
+
+// ログファイルのクリア
+Artisan::command('logs:clear',function(){
+  exec('rm' . storage_path('logs/*.log'));
+  $this->comment('Logs have been cleared!');
+})->describe('Clear log files');

@@ -1,3 +1,4 @@
 db2
 work
+src/php/database/seeds/data/train.tsv
 .env
